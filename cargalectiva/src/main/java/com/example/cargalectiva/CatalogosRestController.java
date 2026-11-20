@@ -12,21 +12,22 @@ import java.util.Map;
 @RequestMapping("/api/catalogos")
 public class CatalogosRestController {
 
-    // INVOCACIÓN 1: Consultar catálogo de carreras
+    // INVOCACION 1: Consultar catalogo de carreras
     @GetMapping("/carreras")
     public List<Map<String, Object>> obtenerCarreras() {
+        System.out.println(">>> Apps Script consulto /api/catalogos/carreras");
 
         return List.of(
             Map.of(
                 "id", 1,
-                "descripcion", "Ingeniería de Software",
+                "descripcion", "Ingenieria de Software",
                 "codigo", "ISW",
-                "facultad", "Facultad de Ingeniería",
+                "facultad", "Facultad de Ingenieria",
                 "estado", "Activa"
             ),
             Map.of(
                 "id", 2,
-                "descripcion", "Administración y Negocios Internacionales",
+                "descripcion", "Administracion y Negocios Internacionales",
                 "codigo", "ANI",
                 "facultad", "Facultad de Ciencias Empresariales",
                 "estado", "Activa"
@@ -40,7 +41,7 @@ public class CatalogosRestController {
             ),
             Map.of(
                 "id", 4,
-                "descripcion", "Psicología",
+                "descripcion", "Psicologia",
                 "codigo", "PSI",
                 "facultad", "Facultad de Ciencias Humanas",
                 "estado", "Activa"
@@ -48,16 +49,17 @@ public class CatalogosRestController {
         );
     }
 
-    // INVOCACIÓN 2: Consultar catálogo de planes de estudio
+    // INVOCACION 2: Consultar catalogo de planes de estudio
     @GetMapping("/planes-estudio")
     public List<Map<String, Object>> obtenerPlanesEstudio() {
+        System.out.println(">>> Apps Script consulto /api/catalogos/planes-estudio");
 
         return List.of(
             Map.of(
                 "id", 101,
                 "descripcion", "Plan de Estudios 2022",
                 "carreraId", 1,
-                "carrera", "Ingeniería de Software",
+                "carrera", "Ingenieria de Software",
                 "version", "2022",
                 "creditos", 200,
                 "estado", "Vigente"
@@ -66,7 +68,7 @@ public class CatalogosRestController {
                 "id", 102,
                 "descripcion", "Plan de Estudios 2024",
                 "carreraId", 1,
-                "carrera", "Ingeniería de Software",
+                "carrera", "Ingenieria de Software",
                 "version", "2024",
                 "creditos", 210,
                 "estado", "Vigente"
@@ -75,7 +77,7 @@ public class CatalogosRestController {
                 "id", 103,
                 "descripcion", "Plan de Estudios 2023",
                 "carreraId", 2,
-                "carrera", "Administración y Negocios Internacionales",
+                "carrera", "Administracion y Negocios Internacionales",
                 "version", "2023",
                 "creditos", 200,
                 "estado", "Vigente"
